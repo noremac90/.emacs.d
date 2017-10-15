@@ -1,4 +1,9 @@
+(require 'package)
 
+(add-to-list 'package-archives
+             '("marmalade" . "http://marmalade-repo.org/packages/"))
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.org/packages/") t)
 
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
@@ -6,20 +11,23 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 
-(load "~/.emacs.d/init-packages")
-
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (ace-window))))
+ '(package-selected-packages (quote (ace-window magit))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+(when (not package-archive-contents)
+  (package-refresh-contents))
+
+(package-install-selected-packages)
 
 (add-to-list 'load-path "~/.emacs.d/vendor")
 
