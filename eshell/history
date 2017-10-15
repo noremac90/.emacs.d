@@ -1,0 +1,128 @@
+./test 
+cd ..
+make
+cmake
+cmake .
+make
+dir
+ls
+mdkr bin
+mkdir bin
+cmake .
+make
+dir
+make clean
+make
+ls
+cd src/
+ls
+rm test
+cd ..
+ls
+make clean
+cd bin
+ls
+cd ..
+make
+ls
+cd bin/
+test
+ls
+./t
+./test
+cd ..
+dir
+cmake .
+make clean
+make
+ls
+cd bin
+ls
+cd ..
+ls
+cd src
+ls
+cd ..
+ls
+cmake install
+cmake .
+cmake clean
+make clean
+cmake .
+make clean
+make
+dir
+ls
+cd src/
+ls
+cd ..
+ls
+cd bin
+ls
+ls
+myexec
+ls
+cd src
+ls
+cd s
+cd src
+dir
+cd ..
+cd src
+ls
+cd bin
+ls
+rm myexec 
+rm test
+cd ..
+cd ..
+cd src/
+ls
+cd ..
+cmake .
+make
+dir
+ls
+cd bin
+ls
+cd ..
+cd src
+ls
+rm -rf bin
+cd ..
+dir
+ls
+cmake .
+make clean
+make
+ls
+cd src/
+ls
+cd ..
+ls
+cd bin
+ls
+./myexec 
+cd ..
+cmake .
+make clean
+make
+make
+/bin/myexec
+bin/myexec 
+make
+make
+make
+make
+cmake
+make
+ls
+ls
+make
+q
+lsq
+make
+ls
+cat CMakeLists.txt
+cat CMakeCache.txt 
+make
