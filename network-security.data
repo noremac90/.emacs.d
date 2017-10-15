@@ -1,3 +1,4 @@
 (
+ (:id "sha1:85457c729378cc93c732b6a3941c8e4f9c2e60f3" :fingerprint "sha1:ab:a6:d7:6a:b3:d3:63:fa:19:0d:65:41:60:23:6e:ef:d3:2a:46:dc" :host "marmalade-repo.org:443" :conditions (:insecure :unknown-ca :invalid))
  (:id "sha1:bd3cfd363b80a3bede7578edde9abf90d773679e" :fingerprint "sha1:03:ef:92:d3:17:b0:c8:f0:e1:bb:f2:7e:4d:b5:e4:13:06:7e:56:56" :host "www.reddit.com:443" :conditions (:insecure :unknown-ca :invalid))
 )
