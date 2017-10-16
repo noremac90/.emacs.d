@@ -33,15 +33,38 @@
 
 (require 'guru-mode)
 (require 'ace-window)
-;; (require 'w3)
-(global-set-key (kbd "C-x o") 'ace-window)
-(global-set-key (kbd "C-x C-b") 'buffer-menu)
+
 
 (load-theme 'deeper-blue)
 
-(guru-global-mode +1)
+;; modes
 
+(guru-global-mode +1)
 (menu-bar-mode -1)
 (tool-bar-mode -1)
-
 (ido-mode 1)
+
+;; keybinds
+
+(global-set-key (kbd "C-x o") 'ace-window)
+(global-set-key (kbd "C-x C-b") 'buffer-menu)
+
+(global-set-key (kbd "C-S-n")
+                (lambda ()
+                  (interactive)
+                  (ignore-errors (next-line 5))))
+
+(global-set-key (kbd "C-S-p")
+                (lambda ()
+                  (interactive)
+                  (ignore-errors (previous-line 5))))
+
+(global-set-key (kbd "C-S-f")
+                (lambda ()
+                  (interactive)
+                  (ignore-errors (forward-char 5))))
+
+(global-set-key (kbd "C-S-b")
+                (lambda ()
+                  (interactive)
+                  (ignore-errors (backward-char 5))))
