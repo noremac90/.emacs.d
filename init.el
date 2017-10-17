@@ -16,7 +16,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (ace-window magit))))
+ '(package-selected-packages (quote (default-text-scale ace-window magit))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -68,3 +68,8 @@
                 (lambda ()
                   (interactive)
                   (ignore-errors (backward-char 5))))
+
+(setq inhibit-splash-screen t)
+
+
+(load "custom.el" t)
