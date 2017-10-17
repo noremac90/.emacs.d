@@ -16,7 +16,12 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (default-text-scale ace-window magit))))
+ '(custom-safe-themes
+   (quote
+    ("fa2b58bb98b62c3b8cf3b6f02f058ef7827a8e497125de0254f56e373abee088" "bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" default)))
+ '(package-selected-packages
+   (quote
+    (which-key spaceline default-text-scale ace-window magit))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -33,9 +38,16 @@
 
 (require 'guru-mode)
 (require 'ace-window)
+(require 'spaceline-config)
 
+(spaceline-emacs-theme)
 
 (load-theme 'deeper-blue)
+(which-key-setup-side-window-bottom)
+
+
+(setq which-key-idle-delay 1.0)
+(which-key-mode)
 
 ;; modes
 
@@ -73,3 +85,4 @@
 
 
 (load "custom.el" t)
+
