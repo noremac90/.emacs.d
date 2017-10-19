@@ -1,3 +1,4 @@
+
 (require 'package)
 
 (add-to-list 'package-archives
@@ -19,9 +20,7 @@
  '(custom-safe-themes
    (quote
     ("fa2b58bb98b62c3b8cf3b6f02f058ef7827a8e497125de0254f56e373abee088" "bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" default)))
- '(package-selected-packages
-   (quote
-    (which-key spaceline default-text-scale ace-window magit))))
+ '(package-selected-packages (quote (which-key default-text-scale ace-window magit))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -38,9 +37,9 @@
 
 (require 'guru-mode)
 (require 'ace-window)
-(require 'spaceline-config)
 
-(spaceline-emacs-theme)
+(powerline-center-theme)
+
 
 (load-theme 'deeper-blue)
 (which-key-setup-side-window-bottom)
@@ -54,6 +53,7 @@
 (guru-global-mode +1)
 (menu-bar-mode -1)
 (tool-bar-mode -1)
+(scroll-bar-mode -1)
 (ido-mode 1)
 
 ;; keybinds
