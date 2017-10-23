@@ -20,7 +20,9 @@
  '(custom-safe-themes
    (quote
     ("fa2b58bb98b62c3b8cf3b6f02f058ef7827a8e497125de0254f56e373abee088" "bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" default)))
- '(package-selected-packages (quote (powerline which-key default-text-scale ace-window magit))))
+ '(package-selected-packages
+   (quote
+    (neotree evil-leader linum-relative evil powerline which-key default-text-scale ace-window magit))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -55,8 +57,12 @@
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 (ido-mode 1)
+(linum-relative-global-mode)
+(global-evil-leader-mode)
+(evil-mode 1)
 
 ;; keybinds
+
 
 (global-set-key (kbd "C-x o") 'ace-window)
 (global-set-key (kbd "C-x C-b") 'buffer-menu)
@@ -85,4 +91,16 @@
 
 
 (load "custom.el" t)
+;; Evil mode setup
+(evil-leader/set-leader ",")
 
+(evil-leader/set-key "ev"
+  (lambda ()
+    (interactive)
+    (find-file "~/.emacs.d/init.el")))
+
+(evil-leader/set-key "n" 'neotree-toggle)
+(evil-define-key 'normal neotree-mode-map (kbd "TAB") 'neotree-enter)
+(evil-define-key 'normal neotree-mode-map (kbd "SPC") 'neotree-quick-look)
+(evil-define-key 'normal neotree-mode-map (kbd "q") 'neotree-hide)
+(evil-define-key 'normal neotree-mode-map (kbd "RET") 'neotree-enter)
