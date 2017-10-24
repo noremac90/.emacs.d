@@ -22,7 +22,7 @@
     ("84d2f9eeb3f82d619ca4bfffe5f157282f4779732f48a5ac1484d94d5ff5b279" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "8ed752276957903a270c797c4ab52931199806ccd9f0c3bb77f6f4b9e71b9272" "cdfc5c44f19211cfff5994221078d7d5549eeb9feda4f595a2fd8ca40467776c" "fa2b58bb98b62c3b8cf3b6f02f058ef7827a8e497125de0254f56e373abee088" "bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" default)))
  '(package-selected-packages
    (quote
-    (solarized-theme monokai-theme neotree evil-leader linum-relative evil which-key default-text-scale ace-window magit))))
+    (evil-surround solarized-theme monokai-theme neotree evil-leader linum-relative evil which-key default-text-scale ace-window magit))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -101,8 +101,16 @@
     (find-file "~/.emacs.d/init.el")))
 
 (evil-leader/set-key "n" 'neotree-toggle)
+(evil-leader/set-key "m s" 'magit-status)
 (evil-define-key 'normal neotree-mode-map (kbd "TAB") 'neotree-enter)
 (evil-define-key 'normal neotree-mode-map (kbd "SPC") 'neotree-quick-look)
 (evil-define-key 'normal neotree-mode-map (kbd "q") 'neotree-hide)
 (evil-define-key 'normal neotree-mode-map (kbd "RET") 'neotree-enter)
 
+(define-key evil-normal-state-map (kbd "<left>") 'evil-window-left)
+(define-key evil-normal-state-map (kbd "<right>") 'evil-window-right)
+(define-key evil-normal-state-map (kbd "<up>") 'evil-window-up)
+(define-key evil-normal-state-map (kbd "<down>") 'evil-window-down)
+
+(require 'evil-surround)
+(global-evil-surround-mode 1)
