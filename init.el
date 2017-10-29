@@ -117,3 +117,4 @@
 
 (setq-default evil-escape-key-sequence "jk")
 (setq-default evil-escape-delay 0.2)
+(evil-escape-mode)
