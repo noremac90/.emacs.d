@@ -115,5 +115,5 @@
 (require 'evil-surround)
 (global-evil-surround-mode 1)
 
-(setq-default evil-escape-key-sequence "jj")
+(setq-default evil-escape-key-sequence "jk")
 (setq-default evil-escape-delay 0.2)
